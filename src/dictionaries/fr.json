@@ -1,0 +1,13 @@
+{
+    "navigation": {
+      "home": "Accueil",
+      "about": "À propos",
+      "contact": "Contact"
+    },
+    "home": {
+      "title": "Bienvenue",
+      "description": "Ceci est un site multilingue"
+    }
+  }
+  
+  

@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "rooms": "POKOJE",
+    "dining": "GASTRONOMIA",
+    "spa": "SPA & WELLNES",
+    "events": "PRZYJĘCIA",
+    "business": "DLA BIZNESU",
+    "entertainment": "ROZRYWKA",
+    "gallery": "GALERIA",
+    "book": "REZERWUJ",
+    "menu": "Menu",
+    "phone": "+48 574 383 282",
+    "subscribe": "Zapisz się",
+    "rights": "Wszelkie prawa zastrzeżone",
+    "privacy": "Polityka prywatności"
+  },
+  "about": {
+    "title": "Hotel Avangarda",
+    "description": "Hotel Avangarda położony jest w samym centrum urokliwego miasteczka Różan, zapewniając doskonałe połączenie spokoju i łatwego dostępu do lokalnych atrakcji. To miejsce, gdzie tradycja spotyka nowoczesność, tworząc idealne warunki do odpoczynku i odkrywania okolicy."
+  },
+  "offers": {
+    "title": "Pakiety",
+    "description": "Nasze pakiety to idealny sposób na spędzenie czasu w wyjątkowej atmosferze. Wybierz ofertę dopasowaną do swoich potrzeb i ciesz się niezapomnianymi chwilami w Hotelu Avangarda.",
+    "details": "Szczegóły",
+    "items": [
+      {
+        "id": 1,
+        "title": "Oferta walentynki",
+        "image": "/pakiet-walentynki.png",
+        "description": "Walentynki tuż, tuż, więc już dziś zaplanuj, jak spędzisz najbardziej romantyczny weekend w roku"
+      },
+      {
+        "id": 2,
+        "title": "Ferie Zimowe",
+        "image": "/pakiet-ferie.png",
+        "description": "Spędź z nami zimowe ferie i ciesz się aktywnością niezależnie od pogody!❄️ Rodzinna atmosfera, pyszne posiłki oraz mnóstwo atrakcji dla dzieci i dorosłych"
+      },
+      {
+        "id": 3,
+        "title": "Wielkanoc",
+        "image": "/pakiet-ferie.png",
+        "description": "Spędź z nami zimowe ferie i ciesz się aktywnością niezależnie od pogody!❄️ Rodzinna atmosfera, pyszne posiłki oraz mnóstwo atrakcji dla dzieci i dorosłych"
+      }
+    ]
+  },
+  "restaurants": {
+    "title": "Restauracje i bary",
+    "description": "Nasza restauracja to miejsce, gdzie tradycyjne smaki spotykają się z nowoczesnym podejściem do kulinariów. Oferujemy szeroki wybór dań, przygotowywanych z najwyższą starannością i dbałością o jakość składników. Zapraszamy na wyjątkowe doznania smakowe w wyjątkowym miejscu.",
+    "details": "Szczegóły"
+  }
+
+}
+

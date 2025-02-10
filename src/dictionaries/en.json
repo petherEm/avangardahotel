@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "rooms": "ROOMS",
+    "dining": "DINING",
+    "spa": "SPA & WELLNESS",
+    "events": "EVENTS",
+    "business": "BUSINESS",
+    "entertainment": "ENTERTAINMENT",
+    "gallery": "GALLERY",
+    "book": "BOOK NOW",
+    "menu": "Menu",
+    "phone": "+48 574 383 282",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy"
+  },
+  "about": {
+    "title": "Hotel Avangarda",
+    "description": "Hotel Avangarda is located in the heart of the charming town of Różan, providing a perfect combination of tranquility and easy access to local attractions. It's a place where tradition meets modernity, creating ideal conditions for relaxation and exploring the surroundings."
+  },
+  "offers": {
+    "title": "Packages",
+    "description": "Our packages are the perfect way to spend time in an exceptional atmosphere. Choose an offer tailored to your needs and enjoy unforgettable moments at Hotel Avangarda.",
+    "details": "Details",
+    "items": [
+      {
+        "id": 1,
+        "title": "Valentine's Day Offer",
+        "image": "/pakiet-walentynki.png",
+        "description": "Valentine's Day is just around the corner, so plan today how you'll spend the most romantic weekend of the year"
+      },
+      {
+        "id": 2,
+        "title": "Winter Break",
+        "image": "/pakiet-ferie.png",
+        "description": "Spend your winter break with us and enjoy activities regardless of the weather!❄️ Family atmosphere, delicious meals, and plenty of attractions for children and adults"
+      },
+      {
+        "id": 3,
+        "title": "Easter Holiday",
+        "image": "/pakiet-ferie.png",
+        "description": "Spend your winter break with us and enjoy activities regardless of the weather!❄️ Family atmosphere, delicious meals, and plenty of attractions for children and adults"
+      }
+    ]
+  },
+  "restaurants": {
+    "title": "Restaurants",
+    "description": "Our restaurants offer a wide range of dishes that will satisfy even the most demanding palates. We invite you to taste our culinary delights.",
+    "details": "Details"
+  }
+
+}
+
