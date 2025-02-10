@@ -4,7 +4,7 @@ import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
 // List of supported locales
-export const locales = ["pl", "en", "fr", "es"]
+export const locales = ["pl", "en"]
 export const defaultLocale = "pl"
 
 // Paths that don't require locale prefix
