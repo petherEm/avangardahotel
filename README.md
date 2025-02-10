@@ -4,10 +4,8 @@
     <img src="https://img.shields.io/badge/-Typescript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
     <img src="https://img.shields.io/badge/-Next_._JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
-    <img src="https://img.shields.io/badge/-OpenAI-black?style=for-the-badge&logoColor=white&logo=openai&color=412991" alt="openai" />
-    <img src="https://img.shields.io/badge/-medusa.js-black?style=for-the-badge&logoColor=white&logo=medusajs&color=0000FF" alt="mapbox" />
-    <img src="https://img.shields.io/badge/-render.com-black?style=for-the-badge&logoColor=white&color=EE4B2B" alt="appwrite" />
-    <img src="https://img.shields.io/badge/-stripe-black?style=for-the-badge&logoColor=white&logo=stripe&color=0000FF" alt="mapbox" />
+    <img src="https://img.shields.io/badge/-stripe-black?style=for-the-badge&logoColor=white&logo=stripe&color=0000FF" alt="stripe" />
+    <img src="https://img.shields.io/badge/-sanity-black?style=for-the-badge&logoColor=white&logo=stripe&color=0000FF" alt="sanity" />
   </div>
 
   <h3 align="center">Avangarda Hotel  - Modern hotel website with reservation systems.</h3>
