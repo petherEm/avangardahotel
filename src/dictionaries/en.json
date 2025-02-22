@@ -16,7 +16,16 @@
   },
   "about": {
     "title": "Hotel Avangarda",
-    "description": "Hotel Avangarda is located in the heart of the charming town of Różan, providing a perfect combination of tranquility and easy access to local attractions. It's a place where tradition meets modernity, creating ideal conditions for relaxation and exploring the surroundings."
+    "description": "Hotel Avangarda is located in the heart of the charming town of Różan, providing a perfect combination of tranquility and easy access to local attractions. It's a place where tradition meets modernity, creating ideal conditions for relaxation and exploring the surroundings.",
+    "address": "ul. Przykładowa 1, 07-300 Różan",
+    "phone": "+48 574 383 282",
+    "email": "recepcja@avangarda.pl",
+    "hours": "Reception open 24/7",
+    "directions": {
+      "car": "Easy access from national road 61. Free parking available on site.",
+      "public": "Regular bus connections from Warsaw and Ostrołęka. The bus stop is located 200m from the hotel."
+    },
+    "googleMaps": "Open in Google Maps"
   },
   "offers": {
     "title": "Packages",

@@ -16,7 +16,16 @@
   },
   "about": {
     "title": "Hotel Avangarda",
-    "description": "Hotel Avangarda położony jest w samym centrum urokliwego miasteczka Różan, zapewniając doskonałe połączenie spokoju i łatwego dostępu do lokalnych atrakcji. To miejsce, gdzie tradycja spotyka nowoczesność, tworząc idealne warunki do odpoczynku i odkrywania okolicy."
+    "description": "Hotel Avangarda położony jest w samym centrum urokliwego miasteczka Różan, zapewniając doskonałe połączenie spokoju i łatwego dostępu do lokalnych atrakcji. To miejsce, gdzie tradycja spotyka nowoczesność, tworząc idealne warunki do odpoczynku i odkrywania okolicy.",
+    "address": "ul. Przykładowa 1, 07-300 Różan",
+    "phone": "+48 574 383 282",
+    "email": "recepcja@avangarda.pl",
+    "hours": "Recepcja czynna całą dobę",
+    "directions": {
+      "car": "Łatwy dojazd drogą krajową nr 61. Bezpłatny parking na miejscu.",
+      "public": "Regularne połączenia autobusowe z Warszawy i Ostrołęki. Przystanek znajduje się 200m od hotelu."
+    },
+    "googleMaps": "Otwórz w Google Maps"
   },
   "offers": {
     "title": "Pakiety",
@@ -48,6 +57,5 @@
     "description": "Nasza restauracja to miejsce, gdzie tradycyjne smaki spotykają się z nowoczesnym podejściem do kulinariów. Oferujemy szeroki wybór dań, przygotowywanych z najwyższą starannością i dbałością o jakość składników. Zapraszamy na wyjątkowe doznania smakowe w wyjątkowym miejscu.",
     "details": "Szczegóły"
   }
-
 }
 
