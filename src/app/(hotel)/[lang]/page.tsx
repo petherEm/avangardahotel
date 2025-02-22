@@ -1,6 +1,7 @@
 import About from "@/components/sub-components/About";
+import Business from "@/components/sub-components/Business";
 import Entertainment from "@/components/sub-components/Entertainment";
-import Hero from "@/components/sub-components/Hero";
+import Hero from "@/components/sub-components/Hero/Hero";
 import Offers from "@/components/sub-components/Offers";
 import Restaurant from "@/components/sub-components/Restaurant";
 import Rooms from "@/components/sub-components/Rooms";
@@ -27,6 +28,7 @@ export default async function Home({
       <Restaurant dict={dict} lang={lang} />
       <Spa />
       <Weddings />
+      <Business />
       <Entertainment />
     </>
   );

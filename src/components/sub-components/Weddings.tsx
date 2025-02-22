@@ -28,7 +28,7 @@ const Weddings = () => {
           >
             Sala Weselna
           </motion.h2>
-          <div className="flex justify-between items-start gap-8">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 md:gap-8">
             <motion.p
               {...fadeInUp}
               transition={{ delay: 0.6 }}
