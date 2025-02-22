@@ -1,6 +1,6 @@
 import { locales } from "@/middleware";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Raleway } from "next/font/google";
 import "./globals.css";
 import { getDictionary } from "@/lib/dictionary";
 import { Navbar } from "@/components/sub-components/Navbar";
@@ -13,6 +13,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
 });
 
@@ -38,7 +43,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${raleway.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar lang={lang} dict={dict} />
         {children}

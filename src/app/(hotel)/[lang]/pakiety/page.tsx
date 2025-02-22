@@ -6,7 +6,7 @@ const Pakiety = async () => {
   const offers = await getAllOffers();
 
   return (
-    <main className="bg-gray-50 min-h-screen">
+    <main className="bg-gray-50 min-h-screen font-raleway">
       <section className="relative h-[40vh] bg-gradient-to-r from-primary/90 to-primary flex items-center justify-center">
         <div className="absolute inset-0 bg-[url('/placeholder.svg')] opacity-10 bg-cover bg-center" />
         <Container className="relative z-10">

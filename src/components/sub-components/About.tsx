@@ -13,9 +13,9 @@ interface AboutProps {
 
 const About = ({ dict, lang }: AboutProps) => {
   return (
-    <Container className="bg-white h-screen w-full text-[#404042]">
+    <Container className="bg-white sm:h-screen w-full text-[#404042]">
       <div className="p-4 max-w-6xl mx-auto flex flex-col items-center justify-center space-y-8">
-        <h1 className="uppercase text-5xl md:text-5xl xl:text-5xl font-semibold text-center tracking-wider">
+        <h1 className="mt-6 uppercase text-5xl md:text-5xl xl:text-5xl font-semibold text-center tracking-wider">
           {dict.about.title}
         </h1>
 

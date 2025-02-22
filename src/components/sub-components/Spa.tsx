@@ -56,7 +56,7 @@ const Spa = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-4xl md:text-5xl font-normal uppercase tracking-wider mb-6"
+            className="text-4xl md:text-5xl font-semibold uppercase tracking-wider mb-6"
           >
             SPA & Wellness
           </motion.h2>
@@ -99,6 +99,7 @@ const Spa = () => {
             transition={{ delay: 1.1 }}
           >
             <Button
+              size="lg"
               variant="secondary"
               className="w-fit transition-all hover:scale-105 active:scale-95"
             >

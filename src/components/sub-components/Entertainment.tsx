@@ -40,6 +40,7 @@ const Entertainment = () => {
               znajdzie coś dla siebie.
             </p>
             <Button
+              size="lg"
               variant="secondary"
               className="w-fit transition-all hover:scale-105 active:scale-95"
             >

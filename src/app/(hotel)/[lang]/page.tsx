@@ -5,6 +5,7 @@ import Offers from "@/components/sub-components/Offers";
 import Restaurant from "@/components/sub-components/Restaurant";
 import Rooms from "@/components/sub-components/Rooms";
 import Spa from "@/components/sub-components/Spa";
+import Weddings from "@/components/sub-components/Weddings";
 import { getDictionary } from "@/lib/dictionary";
 import { getAllOffers } from "@/sanity/lib/offers/getOffers";
 
@@ -25,6 +26,7 @@ export default async function Home({
       <Rooms />
       <Restaurant dict={dict} lang={lang} />
       <Spa />
+      <Weddings />
       <Entertainment />
     </>
   );

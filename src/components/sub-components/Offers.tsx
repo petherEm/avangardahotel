@@ -50,11 +50,11 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
 
   return (
     <Container className="min-h-screen w-full text-[#404042] bg-secondary">
-      <div className="flex flex-col h-full max-w-6xl mx-auto p-4 space-y-6 py-16">
+      <div className="flex flex-col h-full max-w-6xl mx-auto p-4 space-y-6 py-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl font-normal uppercase tracking-wider"
+          className="text-4xl md:text-5xl font-semibold uppercase tracking-wider"
         >
           {dict.offers.title}
         </motion.h2>
@@ -102,7 +102,7 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
                     </div>
 
                     {/* Content container with fixed height */}
-                    <div className="h-[250px] flex flex-col">
+                    <div className="h-[220px] flex flex-col">
                       <h3 className="text-2xl md:text-3xl uppercase font-medium mb-4">
                         {localizedContent.name}
                       </h3>
@@ -111,6 +111,7 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
                       </p>
                       <Link href={`/${lang}/pakiety/${offer._id}`}>
                         <Button
+                          size="lg"
                           variant="secondary"
                           className="w-fit transition-all hover:scale-105 mt-auto"
                         >

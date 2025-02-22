@@ -76,6 +76,7 @@ const Restaurant = ({ dict, lang }: RestaurantProps) => {
             transition={{ delay: 0.9 }}
           >
             <Button
+              size="lg"
               variant="secondary"
               className="w-fit transition-all hover:scale-105 active:scale-95"
             >
