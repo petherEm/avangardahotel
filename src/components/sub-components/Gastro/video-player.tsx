@@ -25,7 +25,10 @@ export default function VideoPlayer() {
       playsInline
       className="absolute inset-0 h-full w-full object-cover"
     >
-      <source src="/gastro-1.mp4" type="video/mp4" />
+      <source
+        src="https://moviestorage.fra1.cdn.digitaloceanspaces.com/gastro-1.mp4"
+        type="video/mp4"
+      />
     </video>
   );
 }
