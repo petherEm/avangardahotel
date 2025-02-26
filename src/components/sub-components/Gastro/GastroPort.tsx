@@ -58,7 +58,7 @@ const GastroPort = ({ dict, lang }: AboutProps) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="uppercase text-3xl md:text-4xl lg:text-5xl font-medium tracking-wide mb-6"
+            className="uppercase text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wider mb-6"
           >
             {dict.portDetails.title}
           </motion.h1>

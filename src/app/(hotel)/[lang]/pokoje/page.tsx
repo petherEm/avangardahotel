@@ -1,39 +1,30 @@
-import { Container } from "@/components/container";
-import OfferGrid from "@/components/OfferGrid";
-import { getAllOffers } from "@/sanity/lib/offers/getOffers";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+import GalleryHero from "@/components/sub-components/Gallery/GalleryHero";
+import GalleryIntro from "@/components/sub-components/Gallery/GalleryIntro";
+import GastroClub from "@/components/sub-components/Gastro/GastroClub";
+import GastroFort from "@/components/sub-components/Gastro/GastroFort";
+import GastroHero from "@/components/sub-components/Gastro/GastroHero";
+import GastroIntro from "@/components/sub-components/Gastro/GastroIntro";
+import GastroPort from "@/components/sub-components/Gastro/GastroPort";
+import RoomsHero from "@/components/sub-components/Rooms/RoomsHero";
+import RoomsIntro from "@/components/sub-components/Rooms/RoomsIntro";
+import { getDictionary } from "@/lib/dictionary";
 
-const RoomsPage = async () => {
-  const offers = await getAllOffers();
+export default async function RoomsMainPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang as "en" | "pl");
 
   return (
-    <main className="bg-gray-50 min-h-screen font-raleway">
-      <section className="relative h-[40vh] bg-gradient-to-r from-primary/90 to-primary flex items-center justify-center">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg')] opacity-10 bg-cover bg-center" />
-        <Container className="relative z-10">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              Our Rooms
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Discover our carefully curated selection of premium offerings
-              designed to meet your needs
-            </p>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
-              dignissimos nisi eos explicabo velit debitis sint nemo error magni
-              quasi voluptatem id, sed perspiciatis quod, corrupti ullam quas
-              facilis, tenetur non illo nobis reiciendis laboriosam vitae!
-              Consequatur eveniet distinctio repellendus!
-            </p>
-          </div>
-        </Container>
-      </section>
+    <>
+      <RoomsHero />
 
-      <Container className="py-12 md:py-20">
-        <OfferGrid offers={offers} />
-      </Container>
-    </main>
+      <AnimateOnScroll>
+        <RoomsIntro dict={dict} lang={lang} />
+      </AnimateOnScroll>
+    </>
   );
-};
-
-export default RoomsPage;
+}
