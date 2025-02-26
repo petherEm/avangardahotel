@@ -76,7 +76,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-white font-raleway;
+    @apply bg-white text-white font-raleway;
   }
   /* Add these styles to hide scrollbar but keep functionality */
   .scrollbar-hide::-webkit-scrollbar {

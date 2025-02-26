@@ -18,7 +18,7 @@ interface RestaurantProps {
 
 const Restaurant = ({ dict, lang }: RestaurantProps) => {
   return (
-    <Container className="min-h-screen w-full text-[#404042] py-8 md:py-16 bg-white">
+    <Container className="min-h-screen w-full text-[#404042] py-8 md:py-16 bg-white lg:mb-10">
       <div className="relative max-w-6xl mx-auto">
         {/* Image Container */}
         <motion.div

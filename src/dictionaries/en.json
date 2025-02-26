@@ -56,6 +56,32 @@
     "title": "Restaurants",
     "description": "Our restaurants offer a wide range of dishes that will satisfy even the most demanding palates. We invite you to taste our culinary delights.",
     "details": "Details"
+  },
+  "diningDetails": {
+    "title": "Dzika Róża",
+    "description": "Our restaurant is a place where you can enjoy delicious meal in a unique atmosphere. We offer a wide range of dishes that will satisfy even the most demanding palates. We invite you to taste our culinary delights.",
+    "hours": "Open daily from 12:00 to 22:00",
+    "menu": "Menu",
+    "book": "Book a table"
+  },
+  "clubDetails": {
+    "title": "Klub Kula",
+    "description": "Klub Kula is a place where you can relax and have fun. We offer a wide range of drinks and snacks, as well as a unique atmosphere that will make your evening unforgettable.",
+    "hours": "Open daily from 18:00 to 02:00",
+    "menu": "Menu",
+    "book": "Book a table"
+  },
+  "fortDetails": {
+    "title": "FORT No.4",
+    "description": "The Fort is barbecue restaurant located in the heart of the city. We offer a wide range of dishes that will satisfy even the most demanding palates. We invite you to taste our culinary delights.",
+    "button": "Details"
+
+  },
+  "portDetails": {
+    "title": "Port",
+    "description": "Port is a place where you can relax and have fun. We offer a wide range of drinks and snacks, as well as a unique atmosphere that will make your evening unforgettable.",
+    "button": "Details"
+
   }
 
 }

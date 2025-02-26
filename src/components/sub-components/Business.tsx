@@ -17,7 +17,7 @@ const fadeInScale = {
 
 const Business = () => {
   return (
-    <Container className="min-h-[600px] w-full text-[#404042] py-8 md:py-16 bg-white overflow-hidden">
+    <Container className="min-h-[600px] w-full text-[#404042] py-8 md:py-16 lg:py-20 bg-white overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Image Section with background */}

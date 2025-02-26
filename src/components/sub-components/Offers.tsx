@@ -49,11 +49,12 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
   };
 
   return (
-    <Container className="min-h-screen w-full text-[#404042] bg-secondary">
+    <Container className="min-h-screen w-full text-[#404042] bg-secondary lg:py-20">
       <div className="flex flex-col h-full max-w-6xl mx-auto p-4 space-y-6 py-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-4xl md:text-5xl font-semibold uppercase tracking-wider"
         >
           {dict.offers.title}
@@ -61,7 +62,8 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.2 }}
           className="text-base md:text-lg max-w-2xl"
         >
@@ -84,7 +86,8 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
                 <motion.div
                   key={offer._id}
                   initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   className="flex-none w-[80%] md:w-[45%] snap-start"
                 >

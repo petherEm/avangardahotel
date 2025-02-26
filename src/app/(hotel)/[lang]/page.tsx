@@ -9,6 +9,7 @@ import Spa from "@/components/sub-components/Spa";
 import Weddings from "@/components/sub-components/Weddings";
 import { getDictionary } from "@/lib/dictionary";
 import { getAllOffers } from "@/sanity/lib/offers/getOffers";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export default async function Home({
   params,
@@ -22,14 +23,30 @@ export default async function Home({
     <>
       {/* Example content to enable scrolling */}
       <Hero />
-      <About dict={dict} lang={lang} />
-      <Offers dict={dict} offers={offers} lang={lang} />
-      <Rooms />
-      <Restaurant dict={dict} lang={lang} />
-      <Spa />
-      <Weddings />
-      <Business />
-      <Entertainment />
+      <AnimateOnScroll>
+        <About dict={dict} lang={lang} />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <Offers dict={dict} offers={offers} lang={lang} />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <Rooms />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <Restaurant dict={dict} lang={lang} />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <Spa />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <Weddings />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <Business />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <Entertainment />
+      </AnimateOnScroll>
     </>
   );
 }

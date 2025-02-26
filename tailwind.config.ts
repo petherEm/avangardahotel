@@ -59,6 +59,7 @@ export default {
   		},
       fontFamily: {
         raleway: ['var(--font-raleway)'],
+		alata: ['var(--font-alata)'],
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],
       },

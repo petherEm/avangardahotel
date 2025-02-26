@@ -56,6 +56,31 @@
     "title": "Restauracje i bary",
     "description": "Nasza restauracja to miejsce, gdzie tradycyjne smaki spotykają się z nowoczesnym podejściem do kulinariów. Oferujemy szeroki wybór dań, przygotowywanych z najwyższą starannością i dbałością o jakość składników. Zapraszamy na wyjątkowe doznania smakowe w wyjątkowym miejscu.",
     "details": "Szczegóły"
+  },
+  "diningDetails": {
+    "title": "Dzika Róża",
+    "description": "Restauracja Dzika Róża to wyjątkowe połączenie elegancji i przytulnej atmosfery. Oferujemy szeroki wybór wyśmienitych dań, przygotowywanych z najwyższej jakości składników. To idealne miejsce zarówno na uroczystą kolację, romantyczny wieczór, jak i rodzinny obiad. Zapraszamy do odkrycia niezapomnianych smaków w klimatycznym wnętrzu naszej restauracji!",
+    "hours": "Otwarte od 12:00 do 22:00",
+    "menu": "Menu",
+    "book": "Zarezerwuj"
+  },
+  "clubDetails": {
+    "title": "Klub Kula",
+    "description": "Klub Kula to miejsce, gdzie świetna zabawa łączy się z pysznym jedzeniem! U nas zjesz doskonałą pizzę, wypijesz kreatywne drinki i spędzisz wieczór pełen emocji przy kręglach i bilardzie. Idealne miejsce na spotkania ze znajomymi i niezapomniane chwile!",
+    "menu": "Menu",
+    "book": "Book a table"
+  },
+  "fortDetails": {
+    "title": "FORT No.4",
+    "description": "W sezonie letnim zapraszamy do Fortu – wyjątkowego miejsca na świeżym powietrzu, gdzie czeka na Was klimatyczne grillowisko. Poczuj smak lata, delektując się grillowanymi specjałami w otoczeniu natury i wyjątkowej atmosfery!",
+    "button": "Dowiedz się więcej"
+
+  },
+  "portDetails": {
+    "title": "Port",
+    "description": "Latem zapraszamy również do Portu, malowniczo położonego nad rzeką Narew. To idealne miejsce, by zrelaksować się na słońcu, napić się aromatycznej kawy i delektować się pysznym jedzeniem z widokiem na wodę. Idealny sposób na letni odpoczynek!.",
+    "button": "Dowiedz się więcej"
+
   }
 }
 

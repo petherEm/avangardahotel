@@ -24,7 +24,7 @@ export function LanguageSwitcher() {
   return (
     <Link
       href={`/${targetLanguage.code}${pathnameWithoutLocale}`}
-      className="px-4 py-2"
+      className="px-4 py-2 font-alata"
     >
       {targetLanguage.name}
     </Link>

@@ -90,7 +90,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
             <Link
               key={item.nameKey}
               href={getLocalizedHref(item.href)}
-              className="text-sm font-medium transition-colors hover:text-[#E31C79]"
+              className="text-sm font-alata font-medium transition-colors hover:text-[#E31C79]"
             >
               {dict.nav[item.nameKey]}
             </Link>
@@ -100,7 +100,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
           <Button
             variant="ghost"
             size="sm"
-            className="w-full justify-start gap-2"
+            className="w-full font-alata justify-start gap-2"
           >
             <Phone className="h-4 w-4" />
             {dict.nav.phone}
@@ -154,7 +154,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
               <Link
                 key={item.nameKey}
                 href={getLocalizedHref(item.href)}
-                className="whitespace-nowrap text-sm font-medium text-white transition-colors hover:text-[#E31C79]"
+                className="whitespace-nowrap text-sm font-alata font-medium text-white transition-colors hover:text-[#E31C79]"
               >
                 {dict.nav[item.nameKey]}
               </Link>
@@ -187,7 +187,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
 
           <a
             href={`tel:${dict.nav.phone}`}
-            className="hidden items-center gap-1 whitespace-nowrap text-xs text-white hover:text-[#E31C79] sm:flex sm:text-sm"
+            className="hidden font-alata items-center gap-1 whitespace-nowrap text-xs text-white hover:text-[#E31C79] sm:flex sm:text-sm"
           >
             <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
             {dict.nav.phone}
@@ -197,7 +197,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
 
           <Button
             size="sm"
-            className="bg-[#E31C79] px-2 text-xs text-white hover:bg-[#E31C79]/90 sm:px-4 sm:text-sm"
+            className="bg-[#E31C79] font-alata px-2 text-xs text-white hover:bg-[#E31C79]/90 sm:px-4 sm:text-sm"
           >
             {dict.nav.book}
           </Button>

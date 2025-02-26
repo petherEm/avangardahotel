@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 const Rooms = () => {
   return (
-    <Container className="relative h-screen w-full">
+    <Container className="relative h-screen w-full mb-4">
       <Image
         src="/room-hero.png"
         alt="Room Background"
@@ -17,15 +17,14 @@ const Rooms = () => {
         sizes="100vw"
         quality={100}
       />
-      {/* Gradient overlay for better text visibility */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-      {/* Content container */}
       <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-12 lg:p-16">
         <div className="max-w-2xl space-y-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-4xl md:text-5xl font-semibold uppercase text-white tracking-wider"
           >
             Oferta Pokoi
@@ -33,7 +32,8 @@ const Rooms = () => {
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             className="text-base md:text-lg text-white/90"
           >
@@ -44,7 +44,8 @@ const Rooms = () => {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
             <Button

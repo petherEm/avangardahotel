@@ -9,14 +9,15 @@ const attractions = ["Basen", "Jacuzzi", "Masaże", "Grota Solna"];
 
 const Spa = () => {
   return (
-    <Container className="min-h-screen w-full text-[#404042] py-8 md:py-16 bg-white">
+    <Container className="min-h-screen w-full text-[#404042] py-2 md:py-16 bg-white">
       <div className="flex flex-col items-center">
         {/* Images Container */}
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
           {/* First Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="relative aspect-[16/10] w-full"
           >
@@ -34,7 +35,8 @@ const Spa = () => {
           {/* Second Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative aspect-[16/10] w-full"
           >
@@ -54,7 +56,8 @@ const Spa = () => {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.4 }}
             className="text-4xl md:text-5xl font-semibold uppercase tracking-wider mb-6"
           >
@@ -63,7 +66,8 @@ const Spa = () => {
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.6 }}
             className="text-base md:text-lg mb-8"
           >
@@ -73,7 +77,8 @@ const Spa = () => {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.7 }}
             className="flex flex-wrap justify-center items-center gap-2 mb-8"
           >
@@ -81,7 +86,8 @@ const Spa = () => {
               <motion.div
                 key={attraction}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.7 + index * 0.1 }}
                 className="flex items-center"
               >
@@ -95,7 +101,8 @@ const Spa = () => {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 1.1 }}
           >
             <Button

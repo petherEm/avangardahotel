@@ -36,7 +36,7 @@ export function Footer({ lang, dict }: FooterProps) {
   const getLocalizedHref = (path: string) => `/${lang}${path}`;
 
   return (
-    <footer className="bg-[#2D2D2D] text-white py-8 md:py-12">
+    <footer className="bg-[#2D2D2D] text-white py-8 md:py-20">
       <Container>
         <div className="flex flex-col gap-8 md:gap-12">
           {/* Top Section Grid */}
@@ -125,7 +125,7 @@ export function Footer({ lang, dict }: FooterProps) {
           <Separator className="bg-white sm:hidden" />
 
           {/* Bottom Section */}
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[10px] md:text-xs opacity-75">
+          <div className="flex flex-row sm:flex-row justify-between items-start sm:items-center gap-4 text-[10px] md:text-xs opacity-75">
             <p className="text-left">
               Copyright © 2023 Hotel Avangarda. All rights reserved.
             </p>

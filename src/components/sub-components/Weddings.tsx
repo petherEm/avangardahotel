@@ -7,17 +7,19 @@ import { Button } from "../ui/button";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
 };
 
 const fadeInScale = {
   initial: { opacity: 0, scale: 0.95 },
-  animate: { opacity: 1, scale: 1 },
+  whileInView: { opacity: 1, scale: 1 },
+  viewport: { once: true },
 };
 
 const Weddings = () => {
   return (
-    <Container className="max-h-screen w-full text-[#404042] py-8 md:py-16 bg-secondary overflow-hidden">
+    <Container className="max-h-screen w-full text-[#404042] py-8 md:py-16 lg:py-20 bg-secondary overflow-hidden lg:mb-10">
       <div className="max-w-[1400px] mx-auto">
         {/* Content Section */}
         <div className="mb-8 md:mb-12">
@@ -54,7 +56,7 @@ const Weddings = () => {
         {/* Images Grid */}
         <div className="grid grid-cols-12 gap-4 md:gap-6 h-[calc(100vh-300px)]">
           {/* Left side images - full width on mobile */}
-          <div className="col-span-12 md:col-span-8 grid grid-rows-2 gap-1 md:gap-6">
+          <div className="col-span-12 md:col-span-8 grid grid-rows-2 md:grid-rows-4 gap-1 md:gap-6 ">
             <motion.div
               {...fadeInScale}
               transition={{ duration: 0.5, delay: 0.2 }}
