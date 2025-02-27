@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Instagram, Menu, Phone } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
@@ -44,6 +45,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isHovered, setIsHovered] = React.useState(false);
   const navRef = React.useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -69,6 +71,13 @@ export function Navbar({ lang, dict }: NavbarProps) {
     setIsHovered(false);
   };
 
+  const isActive = (href: string) => {
+    const localizedHref = `/${lang}${href}`;
+    return (
+      pathname === localizedHref || pathname.startsWith(`${localizedHref}/`)
+    );
+  };
+
   const getLocalizedHref = (path: string) => `/${lang}${path}`;
 
   const MobileMenuContent = () => (
@@ -90,7 +99,9 @@ export function Navbar({ lang, dict }: NavbarProps) {
             <Link
               key={item.nameKey}
               href={getLocalizedHref(item.href)}
-              className="text-sm font-alata font-medium transition-colors hover:text-[#E31C79]"
+              className={`text-sm font-alata font-medium transition-colors ${
+                isActive(item.href) ? "text-[#E31C79]" : "hover:text-[#E31C79]"
+              }`}
             >
               {dict.nav[item.nameKey]}
             </Link>
@@ -154,7 +165,11 @@ export function Navbar({ lang, dict }: NavbarProps) {
               <Link
                 key={item.nameKey}
                 href={getLocalizedHref(item.href)}
-                className="whitespace-nowrap text-sm font-alata font-medium text-white transition-colors hover:text-[#E31C79]"
+                className={`whitespace-nowrap text-sm font-alata font-medium transition-colors ${
+                  isActive(item.href)
+                    ? "text-[#E31C79]"
+                    : "text-white hover:text-[#E31C79]"
+                }`}
               >
                 {dict.nav[item.nameKey]}
               </Link>
@@ -246,7 +261,11 @@ export function Navbar({ lang, dict }: NavbarProps) {
                 <Link
                   key={item.nameKey}
                   href={getLocalizedHref(item.href)}
-                  className="whitespace-nowrap text-sm font-medium text-white transition-colors hover:text-[#E31C79]"
+                  className={`whitespace-nowrap text-sm font-alata font-medium transition-colors ${
+                    isActive(item.href)
+                      ? "text-[#E31C79]"
+                      : "text-white hover:text-[#E31C79]"
+                  }`}
                 >
                   {dict.nav[item.nameKey]}
                 </Link>

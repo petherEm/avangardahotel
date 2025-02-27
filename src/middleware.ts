@@ -8,7 +8,7 @@ export const locales = ["pl", "en"]
 export const defaultLocale = "pl"
 
 // Paths that don't require locale prefix
-const PUBLIC_PATHS = ["/studio"]
+const PUBLIC_PATHS = ["/studio", "/draft-mode"]
 
 // Get the preferred locale from the request headers
 function getLocale(request: NextRequest) {

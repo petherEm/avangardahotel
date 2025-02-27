@@ -1,10 +1,14 @@
 import { locales } from "@/middleware";
 import type { Metadata } from "next";
+import { SanityLive } from "@/sanity/lib/live";
+import { VisualEditing } from "next-sanity";
+import { draftMode } from "next/headers";
 import { Geist, Geist_Mono, Raleway, Alata } from "next/font/google";
 import "./globals.css";
 import { getDictionary } from "@/lib/dictionary";
 import { Navbar } from "@/components/sub-components/Navbar";
 import { Footer } from "@/components/sub-components/Footer";
+import DisableDraftMode from "@/components/sub-components/DisableDraftMode";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,9 +55,16 @@ export default async function RootLayout({
       <body
         className={`${raleway.variable} ${alata.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {(await draftMode()).isEnabled && (
+          <>
+            <DisableDraftMode />
+            <VisualEditing />
+          </>
+        )}
         <Navbar lang={lang} dict={dict} />
         {children}
         <Footer lang={lang} dict={dict} />
+        <SanityLive />
       </body>
     </html>
   );

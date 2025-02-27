@@ -1,12 +1,12 @@
-import { Container } from "../../container";
+import { Container } from "@/components/container";
 import Image from "next/image";
 
-export default function RoomsHero() {
+export default function HeroImage({ image, title }) {
   return (
     <div className="relative w-full h-screen">
       {/* Full screen background image */}
       <Image
-        src="/gallery-images/gal-04.jpg"
+        src={image}
         alt="Gallery hero background"
         fill
         priority
@@ -22,7 +22,7 @@ export default function RoomsHero() {
       <div className="relative h-full w-full flex items-end justify-start">
         <Container className="text-left bg-black/30 text-white z-10  p-4 md:p-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 px-10">
-            Nasze Pokoje
+            {title}
           </h1>
         </Container>
       </div>
