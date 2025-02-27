@@ -1,6 +1,5 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import RoomsHero from "@/components/sub-components/Rooms/RoomsHero";
-import SpaIntro from "@/components/sub-components/Spa/SpaIntro";
+import HeroImage from "@/components/sub-components/HeroImage";
 import TechIntro from "@/components/sub-components/Tech/TechIntro";
 import { getDictionary } from "@/lib/dictionary";
 
@@ -12,10 +11,11 @@ export default async function TechMainPage({
   const { lang } = await params;
   const dict = await getDictionary(lang as "en" | "pl");
 
+  const title = lang === "pl" ? "Technologia" : "Technology";
+
   return (
     <>
-      <RoomsHero />
-
+      <HeroImage image="/gallery-images/gal-02.jpg" title={title} />
       <AnimateOnScroll>
         <TechIntro dict={dict} lang={lang} />
       </AnimateOnScroll>
