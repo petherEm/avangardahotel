@@ -31,6 +31,7 @@
     "title": "Packages",
     "description": "Our packages are the perfect way to spend time in an exceptional atmosphere. Choose an offer tailored to your needs and enjoy unforgettable moments at Hotel Avangarda.",
     "details": "Details",
+    "from": "from",
     "items": [
       {
         "id": 1,

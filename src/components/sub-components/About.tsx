@@ -52,7 +52,7 @@ const About = ({ dict, lang }: AboutProps) => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="uppercase text-4xl md:text-5xl font-semibold tracking-wider"
+                className="uppercase font-alata text-4xl md:text-5xl font-semibold tracking-wider"
               >
                 {dict.about.title}
               </motion.h1>

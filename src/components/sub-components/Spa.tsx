@@ -59,7 +59,7 @@ const Spa = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="text-4xl md:text-5xl font-semibold uppercase tracking-wider mb-6"
+            className="text-4xl font-alata md:text-5xl font-semibold uppercase tracking-wider mb-6"
           >
             SPA & Wellness
           </motion.h2>

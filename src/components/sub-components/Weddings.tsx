@@ -26,7 +26,7 @@ const Weddings = () => {
           <motion.h2
             {...fadeInUp}
             transition={{ delay: 0.4 }}
-            className="text-4xl md:text-5xl font-semibold uppercase tracking-wider mb-6"
+            className="text-4xl font-alata md:text-5xl font-semibold uppercase tracking-wider mb-6"
           >
             Sala Weselna
           </motion.h2>

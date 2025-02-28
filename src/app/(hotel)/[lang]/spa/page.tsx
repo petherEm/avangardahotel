@@ -1,5 +1,5 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import HeroImage from "@/components/sub-components/HeroImage";
+import SpaHero from "@/components/sub-components/Spa/SpaHero";
 import SpaIntro from "@/components/sub-components/Spa/SpaIntro";
 import WorkInProgress from "@/components/sub-components/WorkInProgress";
 import { getDictionary } from "@/lib/dictionary";
@@ -16,8 +16,7 @@ export default async function SpaMainPage({
 
   return (
     <>
-      <HeroImage image="/gallery-images/gal-02.jpg" title={title} />
-
+      <SpaHero />
       <AnimateOnScroll>
         <SpaIntro dict={dict} lang={lang} />
       </AnimateOnScroll>

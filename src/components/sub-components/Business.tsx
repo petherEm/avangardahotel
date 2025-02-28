@@ -47,7 +47,7 @@ const Business = () => {
             <motion.h2
               {...fadeInUp}
               transition={{ delay: 0.4 }}
-              className="text-4xl md:text-5xl font-semibold uppercase tracking-wider"
+              className="text-4xl font-alata md:text-5xl font-semibold uppercase tracking-wider"
             >
               Biznes
             </motion.h2>

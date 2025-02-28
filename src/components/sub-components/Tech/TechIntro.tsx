@@ -15,7 +15,16 @@ interface TechItem {
   name: string;
   version: string;
   purpose: string;
-  category: "frontend" | "backend" | "content" | "ai" | "analytics" | "other";
+  category:
+    | "frontend"
+    | "backend"
+    | "full-stack"
+    | "content"
+    | "ai"
+    | "analytics"
+    | "other"
+    | "hosting"
+    | "storage";
 }
 
 export default function TechIntro() {
@@ -24,12 +33,12 @@ export default function TechIntro() {
       name: "Next.js",
       version: "15",
       purpose: "React framework for production",
-      category: "frontend",
+      category: "full-stack",
     },
     {
       name: "React",
       version: "19",
-      purpose: "UI library",
+      purpose: "Framework",
       category: "frontend",
     },
     {
@@ -63,6 +72,18 @@ export default function TechIntro() {
       category: "analytics",
     },
     {
+      name: "Vercel",
+      version: "N/A",
+      purpose: "Serverless hosting",
+      category: "hosting",
+    },
+    {
+      name: "Digital Ocean",
+      version: "N/A",
+      purpose: "Cloud storage",
+      category: "storage",
+    },
+    {
       name: "Subpages",
       version: "12",
       purpose: "Total website sections",
@@ -74,10 +95,16 @@ export default function TechIntro() {
     switch (category) {
       case "frontend":
         return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300";
+      case "full-stack":
+        return "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300";
       case "backend":
         return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300";
       case "content":
         return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300";
+      case "storage":
+        return "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300";
+      case "hosting":
+        return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300";
       case "ai":
         return "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300";
       case "analytics":

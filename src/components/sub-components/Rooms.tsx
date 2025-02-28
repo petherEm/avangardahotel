@@ -25,7 +25,7 @@ const Rooms = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-semibold uppercase text-white tracking-wider"
+            className="text-4xl font-alata md:text-5xl font-semibold uppercase text-white tracking-wider"
           >
             Oferta Pokoi
           </motion.h2>

@@ -1,4 +1,5 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
+import EntertainmentHero from "@/components/sub-components/Entertainment/EntertainmentHero";
 import EntertainmentIntro from "@/components/sub-components/Entertainment/EntertainmentIntro";
 import HeroImage from "@/components/sub-components/HeroImage";
 import WorkInProgress from "@/components/sub-components/WorkInProgress";
@@ -16,7 +17,7 @@ export default async function EntertainmentMainPage({
 
   return (
     <>
-      <HeroImage image="/gallery-images/gal-02.jpg" title={title} />
+      <EntertainmentHero />
 
       <AnimateOnScroll>
         <EntertainmentIntro dict={dict} lang={lang} />

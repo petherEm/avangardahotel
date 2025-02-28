@@ -56,7 +56,7 @@ const Restaurant = ({ dict, lang }: RestaurantProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="uppercase text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wider"
+            className="uppercase font-alata text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wider"
           >
             {dict.restaurants.title}
           </motion.h1>

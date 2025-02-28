@@ -7,6 +7,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import type { Offers } from "../../../sanity.types";
 import { imageUrl } from "@/lib/imageUrl";
+import { Tag } from "lucide-react";
 
 interface OfferType {
   id: number;
@@ -22,6 +23,7 @@ interface OffersProps {
       description: string;
       details: string;
       items: OfferType[];
+      from: string; // Added for price label
     };
   };
   lang: string;
@@ -34,6 +36,17 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
     const name = lang === "pl" ? offer.plname : offer.enname;
     const description =
       lang === "pl" ? offer.pldescription : offer.endescription;
+    const currency = "PLN";
+
+    // Format price with currency
+    const formattedPrice = offer.price
+      ? new Intl.NumberFormat(lang === "pl" ? "pl-PL" : "en-US", {
+          style: "currency",
+          currency: currency,
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 2,
+        }).format(offer.price)
+      : null;
 
     return {
       name: name || "No title available",
@@ -45,6 +58,7 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
               : ""
           )
           .join("") || "No description available",
+      price: formattedPrice,
     };
   };
 
@@ -55,7 +69,7 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-semibold uppercase tracking-wider"
+          className="text-4xl font-alata md:text-5xl font-semibold uppercase tracking-wider"
         >
           {dict.offers.title}
         </motion.h2>
@@ -92,7 +106,7 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
                   className="flex-none w-[80%] md:w-[45%] snap-start"
                 >
                   <div className="space-y-6">
-                    {/* Image container */}
+                    {/* Image container with price badge */}
                     <div className="relative w-full aspect-[4/3]">
                       <Image
                         src={imageUrl(offer.image!).url() || "/placeholder.svg"}
@@ -102,25 +116,59 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
                         sizes="(max-width: 768px) 80vw, 45vw"
                         priority
                       />
+
+                      {/* Price badge */}
+                      {localizedContent.price && (
+                        <div className="absolute bottom-0 right-0 bg-primary text-white px-4 py-2 flex items-center gap-2 font-medium">
+                          <Tag className="h-4 w-4" />
+                          <span>
+                            {dict.offers.from || "From"}:{" "}
+                            {localizedContent.price}
+                          </span>
+                        </div>
+                      )}
                     </div>
 
                     {/* Content container with fixed height */}
                     <div className="h-[220px] flex flex-col">
-                      <h3 className="text-2xl md:text-3xl uppercase font-medium mb-4">
-                        {localizedContent.name}
-                      </h3>
+                      <div className="flex justify-between items-start mb-4">
+                        <h3 className="text-2xl md:text-3xl uppercase font-medium">
+                          {localizedContent.name}
+                        </h3>
+
+                        {/* Mobile price display for better visibility */}
+                        {localizedContent.price && (
+                          <div className="md:hidden text-primary font-semibold">
+                            {localizedContent.price}
+                          </div>
+                        )}
+                      </div>
+
                       <p className="text-base md:text-lg flex-1">
                         {localizedContent.description}
                       </p>
-                      <Link href={`/${lang}/pakiety/${offer._id}`}>
-                        <Button
-                          size="lg"
-                          variant="secondary"
-                          className="w-fit transition-all hover:scale-105 mt-auto"
-                        >
-                          {dict.offers.details}
-                        </Button>
-                      </Link>
+
+                      <div className="flex justify-between items-center mt-auto">
+                        <Link href={`/${lang}/pakiety/${offer.slug?.current}`}>
+                          <Button
+                            size="lg"
+                            variant="secondary"
+                            className="w-fit transition-all hover:scale-105"
+                          >
+                            {dict.offers.details}
+                          </Button>
+                        </Link>
+
+                        {/* Desktop price display */}
+                        {localizedContent.price && (
+                          <div className="hidden md:flex items-center gap-2 text-primary font-semibold">
+                            <span className="text-sm text-[#404042]/70">
+                              {dict.offers.from || "From"}:
+                            </span>
+                            {localizedContent.price}
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </motion.div>
