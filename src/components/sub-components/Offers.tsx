@@ -8,6 +8,7 @@ import Link from "next/link";
 import type { Offers } from "../../../sanity.types";
 import { imageUrl } from "@/lib/imageUrl";
 import { Tag } from "lucide-react";
+import { useState, useRef, MouseEvent } from "react";
 
 interface OfferType {
   id: number;
@@ -23,7 +24,7 @@ interface OffersProps {
       description: string;
       details: string;
       items: OfferType[];
-      from: string; // Added for price label
+      from: string;
     };
   };
   lang: string;
@@ -31,6 +32,37 @@ interface OffersProps {
 }
 
 const Offers = ({ dict, lang, offers }: OffersProps) => {
+  // Add state for mouse dragging
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  // Mouse handlers
+  const handleMouseDown = (e: MouseEvent) => {
+    if (!scrollContainerRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+    setScrollLeft(scrollContainerRef.current.scrollLeft);
+    // Change cursor during drag
+    scrollContainerRef.current.style.cursor = "grabbing";
+  };
+
+  const handleMouseMove = (e: MouseEvent) => {
+    if (!isDragging || !scrollContainerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scrolling speed
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUpOrLeave = () => {
+    setIsDragging(false);
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.style.cursor = "grab";
+    }
+  };
+
   // Function to get localized content
   const getLocalizedContent = (offer: Offers) => {
     const name = lang === "pl" ? offer.plname : offer.enname;
@@ -86,12 +118,17 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
 
         <div className="relative mt-8">
           <div
-            className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-6 scrollbar-hide"
+            ref={scrollContainerRef}
+            className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-6 scrollbar-hide cursor-grab"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
               WebkitOverflowScrolling: "touch",
             }}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUpOrLeave}
+            onMouseLeave={handleMouseUpOrLeave}
           >
             {offers.map((offer, index) => {
               const localizedContent = getLocalizedContent(offer);
@@ -104,6 +141,7 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   className="flex-none w-[80%] md:w-[45%] snap-start"
+                  onMouseDown={(e) => e.stopPropagation()} // Prevent drag on card click
                 >
                   <div className="space-y-6">
                     {/* Image container with price badge */}
@@ -115,6 +153,7 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
                         className="object-cover"
                         sizes="(max-width: 768px) 80vw, 45vw"
                         priority
+                        draggable={false} // Prevent image dragging
                       />
 
                       {/* Price badge */}
@@ -154,6 +193,7 @@ const Offers = ({ dict, lang, offers }: OffersProps) => {
                             size="lg"
                             variant="secondary"
                             className="w-fit transition-all hover:scale-105"
+                            onClick={(e) => e.stopPropagation()} // Prevent dragging when clicking button
                           >
                             {dict.offers.details}
                           </Button>
